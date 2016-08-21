@@ -11,7 +11,7 @@
 
 @class DetailViewController;
 
-@interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface MasterViewController : UITableViewController <UISplitViewControllerDelegate>
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
 

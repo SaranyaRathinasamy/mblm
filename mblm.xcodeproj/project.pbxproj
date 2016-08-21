@@ -16,6 +16,8 @@
 		B66D3AF21D69AB6E00070D55 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66D3AF11D69AB6E00070D55 /* Images.xcassets */; };
 		B66D3AF51D69AB6E00070D55 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66D3AF31D69AB6E00070D55 /* LaunchScreen.xib */; };
 		B66D3B011D69AB6E00070D55 /* mblmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B66D3B001D69AB6E00070D55 /* mblmTests.m */; };
+		B66D3B0B1D69BFD800070D55 /* Enrollment.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66D3B0A1D69BFD800070D55 /* Enrollment.xib */; };
+		B66D3B0D1D69C6E400070D55 /* Home.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66D3B0C1D69C6E400070D55 /* Home.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		B66D3AFA1D69AB6E00070D55 /* mblmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mblmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B66D3AFF1D69AB6E00070D55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B66D3B001D69AB6E00070D55 /* mblmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mblmTests.m; sourceTree = "<group>"; };
+		B66D3B0A1D69BFD800070D55 /* Enrollment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Enrollment.xib; sourceTree = "<group>"; };
+		B66D3B0C1D69C6E400070D55 /* Home.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Home.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,13 +94,15 @@
 				B66D3AE31D69AB6E00070D55 /* AppDelegate.m */,
 				B66D3AE81D69AB6E00070D55 /* MasterViewController.h */,
 				B66D3AE91D69AB6E00070D55 /* MasterViewController.m */,
-				B66D3AEB1D69AB6E00070D55 /* DetailViewController.h */,
 				B66D3AEC1D69AB6E00070D55 /* DetailViewController.m */,
+				B66D3AEB1D69AB6E00070D55 /* DetailViewController.h */,
 				B66D3AEE1D69AB6E00070D55 /* Main.storyboard */,
 				B66D3AF11D69AB6E00070D55 /* Images.xcassets */,
 				B66D3AF31D69AB6E00070D55 /* LaunchScreen.xib */,
 				B66D3AE51D69AB6E00070D55 /* mblm.xcdatamodeld */,
 				B66D3ADE1D69AB6E00070D55 /* Supporting Files */,
+				B66D3B0A1D69BFD800070D55 /* Enrollment.xib */,
+				B66D3B0C1D69C6E400070D55 /* Home.xib */,
 			);
 			path = mblm;
 			sourceTree = "<group>";
@@ -208,8 +214,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B66D3AF01D69AB6E00070D55 /* Main.storyboard in Resources */,
+				B66D3B0D1D69C6E400070D55 /* Home.xib in Resources */,
 				B66D3AF51D69AB6E00070D55 /* LaunchScreen.xib in Resources */,
 				B66D3AF21D69AB6E00070D55 /* Images.xcassets in Resources */,
+				B66D3B0B1D69BFD800070D55 /* Enrollment.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

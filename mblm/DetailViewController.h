@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIView *homeViewNib;
 
+@property (strong, nonatomic) IBOutlet UIView *enrollmentViewNib;
 @property (strong, nonatomic) id detailItem;
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
-
+@property int optionsString;
 @end
 
