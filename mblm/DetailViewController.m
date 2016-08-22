@@ -25,6 +25,7 @@ enum userEnumOptions
 @property (strong, nonatomic) NSArray *activeReleasesArray;
 @property (strong, nonatomic) UIView *viewExpandedView;
 @property (nonatomic) BOOL isViewVisible;
+@property (retain) NSIndexPath* selectedIndexPath;
 
 @end
 
@@ -108,13 +109,40 @@ enum userEnumOptions
 {
     if(tableView.tag == 10)
     {
-        static NSString *cellIdentifier = @"activeReleasesCell";
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-        if(cell == nil)
-            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
-        cell.textLabel.text = [_activeReleasesArray objectAtIndex:indexPath.row];
-        [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
-        return cell;
+        
+        
+        static NSString *CellIdentifier1 = @"Cell1";
+        static NSString *CellIdentifier2 = @"Cell2";
+        
+        
+        
+        NSIndexPath* indexPathSelected = self.selectedIndexPath;
+        
+        if ( nil == indexPathSelected || [indexPathSelected compare: indexPath] != NSOrderedSame )
+        {
+            activeReleaseExpandedTableViewCell *expCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier1];
+            if (expCell == nil) {
+                // Load the top-level objects from the custom cell XIB.
+                NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"activeReleaseExpandedViewCell" owner:self options:nil];
+                // Grab a pointer to the first object (presumably the custom cell, as that's all the XIB should contain).
+                expCell = [topLevelObjects objectAtIndex:0];
+                expCell.buildName.text = [_activeReleasesArray objectAtIndex:indexPath.row];
+                return expCell;
+            }
+        }
+        else
+        {
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier2];
+            if(cell == nil)
+                cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier2];
+            cell.textLabel.text = [_activeReleasesArray objectAtIndex:indexPath.row];
+            [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+            return cell;
+
+        }
+        
+        return nil;
+    
     }
     else if (tableView.tag == 11)
     {
@@ -132,7 +160,14 @@ enum userEnumOptions
 {
     if(tableView.tag == 10)
     {
+        NSArray* toReload = [NSArray arrayWithObjects: indexPath, self.selectedIndexPath, nil];
+        self.selectedIndexPath = indexPath;
+        
+        [tableView reloadRowsAtIndexPaths: toReload withRowAnimation: UITableViewRowAnimationMiddle];
     
+    }
+
+    /*
         if(!_isViewVisible)
         {
             UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
@@ -147,7 +182,9 @@ enum userEnumOptions
             }
             [cell addSubview:expCell];
              [cell setFrame:CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, cell.frame.size.height + 160 + 5)];
-            
+            [tableView beginUpdates];
+            [tableView endUpdates];
+     */
             /*
             UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
 
@@ -169,7 +206,7 @@ enum userEnumOptions
     
             [cell setFrame:CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, cell.frame.size.height + _viewExpandedView.frame.size.height + 5)];
             */
-            _isViewVisible = YES;
+      /*      _isViewVisible = YES;
         }
         else
         {
@@ -180,11 +217,22 @@ enum userEnumOptions
             _isViewVisible = NO;
         }
         
-    }
+    }*/
     else
     {
         [tableView deselectRowAtIndexPath:indexPath animated:NO];
     }
     
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //check if the index actually exists
+//    if(tableView.tag==10) {
+        if ( self.selectedIndexPath != nil && [self.selectedIndexPath compare: indexPath] == NSOrderedSame )
+        {
+            return tableView.rowHeight * 2;
+        }
+        
+        return tableView.rowHeight;
+}
+
 @end
