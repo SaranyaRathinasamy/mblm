@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UIView *homeViewNib;
+@property (strong, nonatomic) IBOutlet UIView *activeReleasesNib;
 
 @property (strong, nonatomic) IBOutlet UIView *enrollmentViewNib;
 @property (strong, nonatomic) id detailItem;

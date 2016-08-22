@@ -18,6 +18,9 @@
 		B66D3B011D69AB6E00070D55 /* mblmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B66D3B001D69AB6E00070D55 /* mblmTests.m */; };
 		B66D3B0B1D69BFD800070D55 /* Enrollment.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66D3B0A1D69BFD800070D55 /* Enrollment.xib */; };
 		B66D3B0D1D69C6E400070D55 /* Home.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66D3B0C1D69C6E400070D55 /* Home.xib */; };
+		B6AD9AA81D6B5F7100C3D27E /* ActiveReleases.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6AD9AA71D6B5F7100C3D27E /* ActiveReleases.xib */; };
+		B6AD9AAA1D6B729C00C3D27E /* activeReleaseExpandedViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6AD9AA91D6B729C00C3D27E /* activeReleaseExpandedViewCell.xib */; };
+		B6AD9AAD1D6B72DD00C3D27E /* activeReleaseExpandedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6AD9AAC1D6B72DD00C3D27E /* activeReleaseExpandedTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,10 @@
 		B66D3B001D69AB6E00070D55 /* mblmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mblmTests.m; sourceTree = "<group>"; };
 		B66D3B0A1D69BFD800070D55 /* Enrollment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Enrollment.xib; sourceTree = "<group>"; };
 		B66D3B0C1D69C6E400070D55 /* Home.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Home.xib; sourceTree = "<group>"; };
+		B6AD9AA71D6B5F7100C3D27E /* ActiveReleases.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActiveReleases.xib; sourceTree = "<group>"; };
+		B6AD9AA91D6B729C00C3D27E /* activeReleaseExpandedViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = activeReleaseExpandedViewCell.xib; sourceTree = "<group>"; };
+		B6AD9AAB1D6B72DD00C3D27E /* activeReleaseExpandedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = activeReleaseExpandedTableViewCell.h; sourceTree = "<group>"; };
+		B6AD9AAC1D6B72DD00C3D27E /* activeReleaseExpandedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = activeReleaseExpandedTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +101,8 @@
 				B66D3AE31D69AB6E00070D55 /* AppDelegate.m */,
 				B66D3AE81D69AB6E00070D55 /* MasterViewController.h */,
 				B66D3AE91D69AB6E00070D55 /* MasterViewController.m */,
-				B66D3AEC1D69AB6E00070D55 /* DetailViewController.m */,
 				B66D3AEB1D69AB6E00070D55 /* DetailViewController.h */,
+				B66D3AEC1D69AB6E00070D55 /* DetailViewController.m */,
 				B66D3AEE1D69AB6E00070D55 /* Main.storyboard */,
 				B66D3AF11D69AB6E00070D55 /* Images.xcassets */,
 				B66D3AF31D69AB6E00070D55 /* LaunchScreen.xib */,
@@ -103,6 +110,10 @@
 				B66D3ADE1D69AB6E00070D55 /* Supporting Files */,
 				B66D3B0A1D69BFD800070D55 /* Enrollment.xib */,
 				B66D3B0C1D69C6E400070D55 /* Home.xib */,
+				B6AD9AA71D6B5F7100C3D27E /* ActiveReleases.xib */,
+				B6AD9AA91D6B729C00C3D27E /* activeReleaseExpandedViewCell.xib */,
+				B6AD9AAB1D6B72DD00C3D27E /* activeReleaseExpandedTableViewCell.h */,
+				B6AD9AAC1D6B72DD00C3D27E /* activeReleaseExpandedTableViewCell.m */,
 			);
 			path = mblm;
 			sourceTree = "<group>";
@@ -214,8 +225,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B66D3AF01D69AB6E00070D55 /* Main.storyboard in Resources */,
+				B6AD9AAA1D6B729C00C3D27E /* activeReleaseExpandedViewCell.xib in Resources */,
 				B66D3B0D1D69C6E400070D55 /* Home.xib in Resources */,
 				B66D3AF51D69AB6E00070D55 /* LaunchScreen.xib in Resources */,
+				B6AD9AA81D6B5F7100C3D27E /* ActiveReleases.xib in Resources */,
 				B66D3AF21D69AB6E00070D55 /* Images.xcassets in Resources */,
 				B66D3B0B1D69BFD800070D55 /* Enrollment.xib in Resources */,
 			);
@@ -235,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6AD9AAD1D6B72DD00C3D27E /* activeReleaseExpandedTableViewCell.m in Sources */,
 				B66D3AED1D69AB6E00070D55 /* DetailViewController.m in Sources */,
 				B66D3AEA1D69AB6E00070D55 /* MasterViewController.m in Sources */,
 				B66D3AE71D69AB6E00070D55 /* mblm.xcdatamodeld in Sources */,
@@ -432,6 +446,7 @@
 				B66D3B061D69AB6E00070D55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B66D3B071D69AB6E00070D55 /* Build configuration list for PBXNativeTarget "mblmTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +455,7 @@
 				B66D3B091D69AB6E00070D55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D054F5D2-7063-4122-A89F-268EB67E4AEA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>mblm</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9FA1EB6129499A67B5FAD398AE5EB4982A4B08B5</key>
+		<string>https://github.com/SaranyaRathinasamy/mblm</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>mblm.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9FA1EB6129499A67B5FAD398AE5EB4982A4B08B5</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/SaranyaRathinasamy/mblm</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9FA1EB6129499A67B5FAD398AE5EB4982A4B08B5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9FA1EB6129499A67B5FAD398AE5EB4982A4B08B5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>mblm</string>
+		</dict>
+	</array>
+</dict>
+</plist>

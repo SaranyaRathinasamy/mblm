@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Master-->
@@ -23,8 +24,32 @@
         <scene sceneID="yUG-lL-AsK">
             <objects>
                 <viewController storyboardIdentifier="activeReleases" title="Detail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JEX-9P-axG" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kuz-gV-IZb"/>
+                        <viewControllerLayoutGuide type="bottom" id="s7M-c1-kr0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="51Y-yJ-GOp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="grO-Pd-Cfu">
+                                <rect key="frame" x="-4" y="24" width="608" height="566"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="grO-Pd-Cfu" secondAttribute="trailing" constant="-20" id="Ako-Qj-Ox4"/>
+                            <constraint firstItem="grO-Pd-Cfu" firstAttribute="leading" secondItem="51Y-yJ-GOp" secondAttribute="leadingMargin" constant="-20" id="GaN-Ke-ZfA"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="grO-Pd-Cfu" secondAttribute="bottom" constant="10" id="NnS-4S-xQo"/>
+                            <constraint firstItem="grO-Pd-Cfu" firstAttribute="top" secondItem="Kuz-gV-IZb" secondAttribute="bottom" constant="-40" id="cH5-QZ-AIt"/>
+                        </constraints>
+                    </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
+                    <connections>
+                        <outlet property="detailsContentView" destination="grO-Pd-Cfu" id="Ijd-4s-yim"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,6 +9,7 @@
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 
+
 @interface MasterViewController ()
 @property (nonatomic,strong)NSString *userTypes;
 @property (nonatomic,strong)NSMutableArray *userOptions;
@@ -38,7 +39,7 @@
 -(void)loadUserOptions
 {
     if([_userTypes isEqualToString:@"user"])
-        _userOptions = [[NSMutableArray alloc]initWithObjects:@"Home",@"Build Catalog",@"Active Releases",@"Enrollment",@"Contact Us", nil];
+        _userOptions = [[NSMutableArray alloc]initWithObjects:@"Home",@"Active Releases",@"Build Catalog",@"Enrollment",@"Contact Us", nil];
     
 }
 - (void)didReceiveMemoryWarning {
