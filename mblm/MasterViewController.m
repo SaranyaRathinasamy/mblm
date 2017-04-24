@@ -9,7 +9,7 @@
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 
-
+//checking out Babe
 @interface MasterViewController ()
 @property (nonatomic,strong)NSString *userTypes;
 @property (nonatomic,strong)NSMutableArray *userOptions;
